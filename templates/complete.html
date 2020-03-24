@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Medical Image Synthesis</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{url_for('static',filename='css/style.css')}}"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1 class="brand">Welcome to MIS</h1>
+        <nav>
+          <ul>
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">About</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <div class="card">
+        <h2>Your MRI</h2>
+        <img
+          src="{{ url_for('prev_img', filename=prev_name) }}"
+          style="width: 300px;height: 300px;"
+        />
+      </div>
+      <div class="card" style="margin-left: 40px; ">
+        <h2>Predicted CT</h2>
+        <img
+          src="{{ url_for('res_img', filename=res_name) }}"
+          style="width: 300px;height: 300px;"
+        />
+      </div>
+      <button
+        class="btn"
+        style="margin-left:auto;margin-right:auto;display:block"
+      >
+        Go Back
+      </button>
+    </div>
+  </body>
+</html>

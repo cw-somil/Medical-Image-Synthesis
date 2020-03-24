@@ -1,0 +1,166 @@
+body {
+  background-color: black;
+  color: wheat;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  margin-bottom: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+header .brand {
+  display: inline;
+}
+
+header nav {
+  float: right;
+}
+header nav ul {
+  list-style-type: none;
+}
+
+header nav li {
+  display: inline;
+  margin-right: 10px;
+}
+header nav a {
+  text-decoration: none;
+  color: wheat;
+}
+
+header nav a:hover {
+  color: white;
+  transition: 0.3s;
+}
+
+.jumbotron {
+  text-align: center;
+  padding: 200px 100px 200px 100px;
+  margin: auto;
+  background-image: url(../img/doc.jpg);
+  background-size: cover;
+}
+
+.jumbotron button {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.jumbotron button a {
+  text-decoration: none;
+  color: black;
+}
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.btn {
+  padding: 10px;
+  background-color: wheat;
+  color: black;
+  font-family: "Poppins", sans-serif;
+  border: none;
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.btn:hover {
+  background-color: white;
+  transition: 0.3s;
+}
+
+.upload {
+  padding: 100px 100px 200px 100px;
+}
+.upload input {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.card {
+  display: inline-block;
+  width: 47%;
+  height: 400px;
+  background-color: wheat;
+  color: black;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  margin-bottom: 30px;
+}
+
+.card:hover {
+  background-color: white;
+}
+
+.card:hover h2 {
+  background-color: gray;
+  color: white;
+}
+
+.card h2:hover {
+  background-color: gray;
+}
+.card img {
+  width: 200px;
+  height: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-top: 30px;
+}
+
+.card h2 {
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: burlywood;
+  padding: 3px;
+  margin: 0;
+}
+
+.card h3 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+footer h1 {
+  float: right;
+  color: wheat;
+  display: inline;
+}
+
+footer nav {
+  float: left;
+  margin: 0;
+}
+footer nav ul {
+  list-style-type: none;
+}
+
+footer nav li {
+  display: inline;
+  margin-left: 10px;
+}
+footer nav a {
+  text-decoration: none;
+  color: wheat;
+}
+
+footer nav a:hover {
+  color: white;
+  transition: 0.3s;
+}
