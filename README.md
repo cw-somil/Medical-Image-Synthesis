@@ -20,4 +20,4 @@ Run the Flask Server
 
 ![Page 1 Section B](https://github.com/Somil112/Medical-Image-Synthesis/blob/master/screenshots/1_2.JPG)
 
-![Page 2](https://github.com/Somil112/Medical-Image-Synthesis/blob/master/screenshots/2.JPG)
+![Page 2](https://github.com/Somil112/Medical-Image-Synthesis/blob/master/screenshots/2.jpg)
