@@ -13,3 +13,11 @@ Run the Flask Server
 
     python app.py
 
+
+## Screenshots
+
+![Page 1 Section A](https://github.com/Somil112/Medical-Image-Synthesis/screenshots/1_1.jpg)
+
+![Page 1 Section B](https://github.com/Somil112/Medical-Image-Synthesis/screenshots/1_2.jpg)
+
+![Page 2](https://github.com/Somil112/Medical-Image-Synthesis/screenshots/2.jpg)
