@@ -16,8 +16,7 @@ Run the Flask Server
 
 ## Screenshots
 
-![Page 1 Section A](https://github.com/Somil112/Medical-Image-Synthesis/blob/master/screenshots/1_1.JPG)
+![Homepage](https://github.com/Somil112/Medical-Image-Synthesis/blob/master/screenshots/Long%20Capture/Home.png)
 
-![Page 1 Section B](https://github.com/Somil112/Medical-Image-Synthesis/blob/master/screenshots/1_2.JPG)
+![Prediction Page](https://github.com/Somil112/Medical-Image-Synthesis/blob/master/screenshots/Long%20Capture/Prediction.png)
 
-![Page 2](https://github.com/Somil112/Medical-Image-Synthesis/blob/master/screenshots/2.jpg)
