@@ -215,16 +215,18 @@ def load_model():
 
 
 
-def predict(fname,model):
-    image = mpimg.imread("images/"+fname)
+def predict(fname,model,dirname="images",return_img=False):
+    image = mpimg.imread(dirname + "/"+fname)
     image = color.rgb2gray(image)
     image = resize(image,(200,200))
-    print(image.shape)
     image = np.reshape(image,(1, 200,200,1))
     im = model.predict(image)
     im = np.reshape(im,(200,200))
-    out_name = fname + '_result.png'
-    out_dir ="results/" + out_name  
-    mpimg.imsave(out_dir,im,cmap='gray')
-    
-    return out_name
+    if(return_img == True):
+        return im
+    else:
+        out_name = fname + '_result.png'
+        out_dir ="results/" + out_name  
+        mpimg.imsave(out_dir,im,cmap='gray')
+        
+        return out_name

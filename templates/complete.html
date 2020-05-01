@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Medical Image Synthesis</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link
       rel="stylesheet"
       type="text/css"
@@ -27,7 +28,29 @@
           </ul>
         </nav>
       </header>
+      <div class="info-container-form">
+        <div class="element"><h1>Medical History</h1></div>
+        
+        <div class="element">
+        
+        <h2>NAME:</h2>
+        <h2>AGE:</h2>
+        <h2>MRI TYPE:</h2>
+        <h2>PREVIOUS CONDITIONS:</h2>
+        
+      </div>
+      <div class="element">
+        
+        <h2>John Doe</h2>
+        <h2>45</h2>
+        <h2>Brain</h2>
+        <h2>No</h2>
+     
+      </div>
+      </div>
 
+
+      <div class="card-container">
       <div class="card">
         <h2>Your MRI</h2>
         <img
@@ -42,12 +65,48 @@
           style="width: 300px;height: 300px;"
         />
       </div>
+    </div>
       <button
         class="btn"
         style="margin-left:auto;margin-right:auto;display:block"
       >
         Go Back
       </button>
-    </div>
+  
+
+    <section id="info">
+      <div class="info-container">
+        <div class="element">
+          <h1>What happens during the process?</h1>
+          <h2>We use a cutting edge Deep Learning Architecture called
+            CycleGAN which helps us in converting MRI Scans to CT Scans. 
+            The CycleGAN is a technique that involves the automatic training 
+            of image-to-image translation models without paired examples.
+            The models are trained in an unsupervised manner using a collection of images from the source and target domain that do not need to be related in any way.
+            This simple technique is powerful, achieving visually 
+            impressive results on a range of application domains, 
+            most notably translating photographs of horses to zebra, 
+            and the reverse.</h2>
+            <h1>Too Complex? We'll break it down for you!</h1>
+            <h2>Look at this image. It is a simple translation of what CycleGAN is capable of doing. Quite Powerful Right?</h2>
+            <img src="{{url_for('static',filename='img/gan_example.jpg')}}">
+            <h1>All this is Great, but how can this model apply to MRI CT Conversions?</h1>
+            <h2>The MRI -> CT conversion requires training the model with tons of Images of MRIs and CTs. 
+              We made a dataset of tons of such images and put the model to task!
+            </h2>
+            <h1>What's training tho?</h1>
+            <h2>In order to learn something, we need to write it a few times, read it again and again to get it fixed in our mind.
+              Similary Deep Learing Models go through training where they are shown with various representations of images
+              and asked to find a way themselves. Pretty Cool Right?</h2>
+              <h1>How do we trust it?</h1>
+              <h2>Here are some test results that we ran, which shows how good is the model</h2>
+              <img style="width:50%;height:50%" src="{{url_for('static',filename='img/test_0.png')}}">
+              <img style="width:50%;height:50%" src="{{url_for('static',filename='img/test_1.png')}}">
+              <img style="width:50%;height:50%" src="{{url_for('static',filename='img/test_2.png')}}">
+              <img style="width:50%;height:50%" src="{{url_for('static',filename='img/test_3.png')}}">
+      </div>
+    </section>
+
+  </div>
   </body>
 </html>

@@ -2,12 +2,15 @@
 <html>
   <head>
     <title>Medical Image Synthesis</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link
       rel="stylesheet"
       type="text/css"
       href="{{
     url_for('static',filename='css/style.css')}}"
     />
+
+ 
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
@@ -18,11 +21,23 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/100/three.min.js"></script>
+    <script src="https://www.vantajs.com/dist/vanta.net.min.js"></script>
+<!--  
+    <script src="{{url_for('static',filename='js/vanta.birds.min.js')}}"> -->
+    </script>
+
+
   </head>
-  <body>
+
+  <body id="vantajs">
+
     <div class="container">
       <header class="animated fadeInDown">
-        <h1 class="brand">Welcome to MIS</h1>
+        <div class="brand">
+          <h1>Welcome to MIS</h1>
+        </div>
+        
         <nav>
           <ul>
             <li>
@@ -31,6 +46,10 @@
             <li>
               <a href="#">About</a>
             </li>
+            <li>
+              <a href="#">Welcome John Doe</a>
+            </li>
+
           </ul>
         </nav>
       </header>
@@ -46,17 +65,23 @@
               Predict Now
             </a>
           </button>
+          <button class="btn">
+            <a href="#info">
+              View FAQs
+            </a>
+          </button>
         </div>
       </section>
 
       <section id="section2">
-        <div class="upload">
+        
           <form
             id="upload_form"
             action="{{ url_for('upload') }}"
             method="POST"
             enctype="multipart/form-data"
           >
+          <div class="card-container">
             <div class="card">
               <h2>Step 1:</h2>
               <img src="{{url_for('static',filename='img/upload.png')}}" />
@@ -67,6 +92,8 @@
               <img src="{{url_for('static',filename='img/press.png')}}" />
               <h3>Press the Predict Button</h3>
             </div>
+          </div>
+          <div>
             <input
               class="btn"
               type="file"
@@ -74,9 +101,47 @@
               accept="image/*"
               multiple
             />
+        
+        <div>
+            <input  class="btn" type="submit" value="Predict" />
+          </div>
+        </div>
 
-            <input class="btn" type="submit" value="Predict" />
           </form>
+        
+      </section>
+
+
+      <section id="info">
+        <div class="info-container">
+          <div class="element">
+            <h1>What happens during the process?</h1>
+            <h2>We use a cutting edge Deep Learning Architecture called
+              CycleGAN which helps us in converting MRI Scans to CT Scans. 
+              The CycleGAN is a technique that involves the automatic training 
+              of image-to-image translation models without paired examples.
+              The models are trained in an unsupervised manner using a collection of images from the source and target domain that do not need to be related in any way.
+              This simple technique is powerful, achieving visually 
+              impressive results on a range of application domains, 
+              most notably translating photographs of horses to zebra, 
+              and the reverse.</h2>
+              <h1>Too Complex? We'll break it down for you!</h1>
+              <h2>Look at this image. It is a simple translation of what CycleGAN is capable of doing. Quite Powerful Right?</h2>
+              <img src="{{url_for('static',filename='img/gan_example.jpg')}}">
+              <h1>All this is Great, but how can this model apply to MRI CT Conversions?</h1>
+              <h2>The MRI -> CT conversion requires training the model with tons of Images of MRIs and CTs. 
+                We made a dataset of tons of such images and put the model to task!
+              </h2>
+              <h1>What's training tho?</h1>
+              <h2>In order to learn something, we need to write it a few times, read it again and again to get it fixed in our mind.
+                Similary Deep Learing Models go through training where they are shown with various representations of images
+                and asked to find a way themselves. Pretty Cool Right?</h2>
+                <h1>How do we trust it?</h1>
+                <h2>Here are some test results that we ran, which shows how good is the model</h2>
+                <img style="width:50%;height:50%" src="{{url_for('static',filename='img/test_0.png')}}">
+                <img style="width:50%;height:50%" src="{{url_for('static',filename='img/test_1.png')}}">
+                <img style="width:50%;height:50%" src="{{url_for('static',filename='img/test_2.png')}}">
+                <img style="width:50%;height:50%" src="{{url_for('static',filename='img/test_3.png')}}">
         </div>
       </section>
 
@@ -95,4 +160,18 @@
       </footer>
     </div>
   </body>
-</html>
+  <script>
+VANTA.NET({
+  el: "#vantajs",
+  mouseControls: true,
+  touchControls: true,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  scaleMobile: 1.00,
+  color: 0xfcf0b8,
+  backgroundColor: 0x0,
+  points: 10.00
+})
+</script>
+</html>	
